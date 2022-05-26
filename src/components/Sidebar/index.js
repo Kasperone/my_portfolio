@@ -3,7 +3,12 @@ import "./index.scss"
 import LogoK from "../../assets/images/k-logo.png"
 import LogoSurname from "../../assets/images/k-surname.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHome, faUser, faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import {
+	faHome,
+	faUser,
+	faEnvelope,
+	faComputer,
+} from "@fortawesome/free-solid-svg-icons"
 import {
 	faDiscord,
 	faGithub,
@@ -30,6 +35,13 @@ const Sidebar = () => (
 				className='about-link'
 				to='/about'>
 				<FontAwesomeIcon icon={faUser} color='#4d4d4e' />
+			</NavLink>
+			<NavLink
+				exact='true'
+				activeclassname='active'
+				className='skills-link'
+				to='/skills'>
+				<FontAwesomeIcon icon={faComputer} color='#4d4d4e' />
 			</NavLink>
 			<NavLink
 				exact='true'
