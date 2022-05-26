@@ -1,7 +1,4 @@
-import "./index.scss"
-import AnimatedLetters from "../AnimatedLetters/index"
 import { useState, useEffect } from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
 	faCss3,
 	faGitAlt,
@@ -10,6 +7,9 @@ import {
 	faReact,
 } from "@fortawesome/free-brands-svg-icons"
 import Loader from "react-loaders"
+import AnimatedLetters from "../AnimatedLetters/index"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import "./index.scss"
 
 const About = () => {
 	const [letterClass, setLetterClass] = useState("text-animate")
