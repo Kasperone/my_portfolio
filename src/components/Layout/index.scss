@@ -36,7 +36,8 @@
 	animation-delay: 1s;
 }
 
-.about-page {
+.about-page,
+.contact-page {
 	.text-zone {
 		position: absolute;
 		left: 10%;
@@ -59,7 +60,7 @@
 
 			&::before {
 				content: "<h1>";
-				font-family: "La Belle Aurrore";
+				font-family: "La Belle Aurrore", cursive;
 				font-size: 18px;
 				line-height: 18px;
 				position: absolute;
@@ -70,7 +71,7 @@
 
 			&::after {
 				content: "</h1>";
-				font-family: "La Belle Aurrore";
+				font-family: "La Belle Aurrore", cursive;
 				font-size: 18px;
 				position: absolute;
 				left: -35px;
