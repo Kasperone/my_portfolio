@@ -3,6 +3,7 @@ import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Loader from "react-loaders"
 import AnimatedLetters from "../AnimatedLetters"
+import SphereAnimation from "../SphereAnimation"
 import "./index.scss"
 
 const Home = () => {
@@ -71,6 +72,9 @@ const Home = () => {
 					</h2>
 				</div>
 			</div>
+
+			<SphereAnimation />
+
 			<Loader type='pacman' />
 		</>
 	)
