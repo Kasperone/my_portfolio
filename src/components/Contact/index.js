@@ -18,12 +18,7 @@ const Contact = () => {
 		e.preventDefault()
 
 		emailjs
-			.sendForm(
-				"service_xe7mvsn",
-				"template_fpjqand",
-				form.current,
-				"8NTucHhveCvoZYOq6"
-			)
+			.sendForm("YOUR_SERVICE", "YOUR_TAMPLATE", form.current, "YOUR_API_KEY")
 			.then(
 				result => {
 					alert(result.text)
