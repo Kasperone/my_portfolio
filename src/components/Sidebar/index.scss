@@ -1,35 +1,96 @@
 .nav-bar {
 	background: #181818;
-	width: 120px;
-	height: 100%;
+	width: 100%;
+	// height: 15%;
 	position: absolute;
 	z-index: 3;
-	min-height: 500px;
+	// min-height: 127px;
 
 	.logo {
 		display: block;
-		padding: 8px 0px;
 
 		img {
 			display: block;
 			margin: 8px auto;
-			width: 90px;
+			width: 36px;
 			height: auto;
 
 			&.logo-text {
-				width: 90px;
+				width: 36px;
+			}
+		}
+
+		.menu-btn {
+			position: relative;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 80px;
+			height: 80px;
+			cursor: pointer;
+			transition: all 0.5 ease-in-out;
+			border: 3px solid white;
+
+			.menu-btn_burger {
+				width: 50px;
+				height: 6px;
+				background-color: #fff;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+				transition: all 0.5s ease-in-out;
+			}
+
+			&.open {
+				.menu-btn_burger {
+					transform: translate(-50px);
+					background: transparent;
+					box-shadow: none;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+			}
+
+			&::before {
+				transform: translateY(-16px);
+			}
+
+			&::after {
+				transform: translateY(16px);
+			}
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				width: 50px;
+				height: 6px;
+				background: #fff;
+				border-radius: 5px;
+				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
+				transition: all 0.5s ease-in-out;
 			}
 		}
 	}
 
 	nav {
-		display: block;
-		text-align: center;
-		position: absolute;
-		height: 210px;
-		top: 50px;
-		margin-top: 120px;
 		width: 100%;
+		position: fixed;
+		/* left: 100%; */
+		/* opacity: 0; */
+		margin-left: 0;
+		text-align: center;
+		background: #181818;
+		-webkit-transition: all 0.3s ease-out;
+		transition: all 0.3s ease-out;
+		animation: fadeInRight 1s 1s;
+		display: flex;
+		justify-content: space-around;
 
 		a {
 			font-size: 22px;
@@ -105,7 +166,7 @@
 		position: absolute;
 		bottom: 20px;
 		width: 100%;
-		display: block;
+		display: none;
 		padding: 0;
 		list-style: none;
 		text-align: center;
