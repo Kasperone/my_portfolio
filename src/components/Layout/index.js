@@ -2,11 +2,13 @@ import { Outlet } from "react-router-dom"
 import Sidebar from "../Sidebar"
 import "./index.scss"
 
+console.log("Layout Start")
+
 const Layout = () => {
 	return (
 		<div className='App'>
-			<Sidebar />
 			<div className='page'>
+				<Sidebar />
 				<span className='tags top-tags'>&lt;body&gt;</span>
 
 				<Outlet />
@@ -16,5 +18,5 @@ const Layout = () => {
 		</div>
 	)
 }
-
+console.log("Layout End")
 export default Layout

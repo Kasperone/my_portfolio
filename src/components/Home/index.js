@@ -4,7 +4,10 @@ import { Link } from "react-router-dom"
 import Loader from "react-loaders"
 import AnimatedLetters from "../AnimatedLetters"
 import SphereAnimation from "../SphereAnimation"
+import { createSphere } from "../SphereAnimation"
 import "./index.scss"
+
+console.log("Home Start")
 
 const Home = () => {
 	const [letterClass, setLetterClass] = useState("text-animate")
@@ -34,13 +37,15 @@ const Home = () => {
 	]
 
 	useEffect(() => {
-		setTimeout(() => {
-			return setLetterClass("text-animate-hover")
-		}, 4000)
+		const timer = setTimeout(() => setLetterClass("text-animate-hover"), 4000)
+		setTimeout(() => createSphere(), 1000)
+		return () => clearTimeout(timer)
 	}, [])
 
 	return (
 		<>
+			<Loader type='pacman' />
+			<SphereAnimation />
 			<div className='container home-page'>
 				<div className='text-zone'>
 					<h1>
@@ -54,12 +59,12 @@ const Home = () => {
 						<AnimatedLetters
 							letterClass={letterClass}
 							strArray={nameArray}
-							idx={15}
+							idx={12}
 						/>
 						<AnimatedLetters
 							letterClass={letterClass}
 							strArray={jobArray}
-							idx={22}
+							idx={19}
 						/>
 						{/* <img src={LogoK} alt='logo-k' /> */}
 						<br />
@@ -72,12 +77,10 @@ const Home = () => {
 					</h2>
 				</div>
 			</div>
-
-			<SphereAnimation />
-
-			<Loader type='pacman' />
 		</>
 	)
 }
+
+console.log("Home End")
 
 export default Home
