@@ -1,26 +1,32 @@
-.nav-bar {
-	background: #181818;
+.header {
+	background: #0000001a;
 	width: 100%;
 	// height: 15%;
 	position: absolute;
 	z-index: 3;
 	// min-height: 127px;
 
-	.logo {
-		display: block;
+	.header-top {
+		display: flex;
+		justify-content: space-between;
 
-		img {
-			display: block;
-			margin: 8px auto;
-			width: 36px;
-			height: auto;
+		.header-top_logo-wrapper {
+			display: flex;
+			flex-direction: column;
 
-			&.logo-text {
-				width: 36px;
+			img {
+				display: block;
+				margin: auto 10px;
+				width: 46px;
+				height: auto;
+
+				&.logo-text {
+					width: 36px;
+				}
 			}
 		}
 
-		.menu-btn {
+		.nav-bar_btn_wrapper {
 			position: relative;
 			display: flex;
 			justify-content: center;
@@ -29,11 +35,10 @@
 			height: 80px;
 			cursor: pointer;
 			transition: all 0.5 ease-in-out;
-			border: 3px solid white;
 
-			.menu-btn_burger {
-				width: 50px;
-				height: 6px;
+			.nav-bar_btn-burger {
+				width: 36px;
+				height: 3px;
 				background-color: #fff;
 				border-radius: 5px;
 				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -41,7 +46,7 @@
 			}
 
 			&.open {
-				.menu-btn_burger {
+				.nav-bar_btn-burger {
 					transform: translate(-50px);
 					background: transparent;
 					box-shadow: none;
@@ -68,8 +73,8 @@
 			&::after {
 				content: "";
 				position: absolute;
-				width: 50px;
-				height: 6px;
+				width: 36px;
+				height: 3px;
 				background: #fff;
 				border-radius: 5px;
 				box-shadow: 0 2px 5px rgba(255, 101, 47, 0.2);
@@ -78,19 +83,26 @@
 		}
 	}
 
-	nav {
-		width: 100%;
+	.nav-bar_slide {
+		width: 95%;
 		position: fixed;
-		/* left: 100%; */
-		/* opacity: 0; */
-		margin-left: 0;
+		left: 100%;
+		opacity: 0;
+		margin: 0 10px 20px 10px;
+		bottom: 0;
 		text-align: center;
-		background: #181818;
+		background: #1818187d;
+		border-radius: 25px;
 		-webkit-transition: all 0.3s ease-out;
 		transition: all 0.3s ease-out;
 		animation: fadeInRight 1s 1s;
 		display: flex;
 		justify-content: space-around;
+
+		&.nav-bar_open {
+			left: 0;
+			opacity: 1;
+		}
 
 		a {
 			font-size: 22px;

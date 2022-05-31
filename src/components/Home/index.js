@@ -1,4 +1,3 @@
-// import LogoK from "../../assets/images/k-logo.png"
 import { useState, useEffect } from "react"
 import { Link } from "react-router-dom"
 import Loader from "react-loaders"
@@ -12,29 +11,8 @@ console.log("Home Start")
 const Home = () => {
 	const [letterClass, setLetterClass] = useState("text-animate")
 	const nameArray = ["K", "a", "s", "p", "e", "r", " "]
-	const jobArray = [
-		"J",
-		"a",
-		"v",
-		"a",
-		"S",
-		"c",
-		"r",
-		"i",
-		"p",
-		"t",
-		" ",
-		"d",
-		"e",
-		"v",
-		"e",
-		"l",
-		"o",
-		"p",
-		"e",
-		"r",
-		".",
-	]
+	const jobArray = ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t", " "]
+	const devArray = ["d", "e", "v", "e", "l", "o", "p", "e", "r", "."]
 
 	useEffect(() => {
 		const timer = setTimeout(() => setLetterClass("text-animate-hover"), 4000)
@@ -48,32 +26,43 @@ const Home = () => {
 			<SphereAnimation />
 			<div className='container home-page'>
 				<div className='text-zone'>
-					<h1>
-						<span className={letterClass}>H</span>
-						<span className={`${letterClass} _12`}>i</span>
-						<span className={`${letterClass} _13`}>,&nbsp;</span>
+					<div>
+						<h1>
+							<span className={letterClass}>H</span>
+							<span className={`${letterClass} _12`}>i</span>
+							<span className={`${letterClass} _13`}>,&nbsp;</span>
+						</h1>
 						<br />
-						<span className={`${letterClass} _14`}>I</span>
-						<span className={`${letterClass} _15`}>'</span>
-						<span className={`${letterClass} _16`}>m&nbsp;</span>
-						<AnimatedLetters
-							letterClass={letterClass}
-							strArray={nameArray}
-							idx={12}
-						/>
-						<AnimatedLetters
-							letterClass={letterClass}
-							strArray={jobArray}
-							idx={19}
-						/>
-						{/* <img src={LogoK} alt='logo-k' /> */}
-						<br />
-					</h1>
+						<h1>
+							<span className={`${letterClass} _14`}>I</span>
+							<span className={`${letterClass} _15`}>'</span>
+							<span className={`${letterClass} _16`}>m&nbsp;</span>
+							<AnimatedLetters
+								letterClass={letterClass}
+								strArray={nameArray}
+								idx={17}
+							/>
+						</h1>
+						<h1>
+							<AnimatedLetters
+								letterClass={letterClass}
+								strArray={jobArray}
+								idx={22}
+							/>
+						</h1>
+						<h1>
+							<AnimatedLetters
+								letterClass={letterClass}
+								strArray={devArray}
+								idx={29}
+							/>
+						</h1>
+					</div>
 					<h2>
-						Front-end Developer / JavaScript / React.js
-						<Link to='/contact' className='flat-button'>
+						Front-end / React.js / JavaScript
+						{/* <Link to='/contact' className='flat-button'>
 							CONTACT ME
-						</Link>
+						</Link> */}
 					</h2>
 				</div>
 			</div>

@@ -22,9 +22,9 @@ export const createSphere = () => {
 
 			spoke.className = `spoke spoke-${y}`
 			spoke.innerHTML = ` <div class="dot" style="background-color:${
-				y % 2 === 0 ? "#00fffa" : "#ff9800"
+				y % 2 === 0 ? "#bf38e3 " : "#0083ff"
 			}; animation: pulsate .5s infinite ${aDelay(y)}s alternate both"></div>`
-
+			// #00fffa #ff9800
 			spoke.style.transform = `rotateZ(${y}0deg)`
 			document.querySelector(`.plane-${x}`).appendChild(spoke)
 		}
