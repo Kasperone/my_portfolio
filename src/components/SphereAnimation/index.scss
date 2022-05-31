@@ -3,10 +3,10 @@
 	display: flex;
 	position: absolute;
 	transform-style: preserve-3d;
-	perspective: 400px;
-	inset: 0;
-	align-items: center;
-	justify-content: center;
+	// perspective: 400px;
+	// inset: 0;
+	left: 52px;
+	top: 166px;
 
 	.sphere-wrapper {
 		transform-style: preserve-3d;
@@ -29,7 +29,7 @@
 	position: absolute;
 	left: 50%;
 	top: 50%;
-	height: 200px;
+	height: 170px;
 	width: 0;
 }
 

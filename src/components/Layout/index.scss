@@ -4,22 +4,6 @@
 	position: absolute;
 }
 
-.top-tags {
-	bottom: auto;
-	top: 35px;
-}
-
-.tags {
-	color: #ffd700;
-	opacity: 0.6;
-	margin: 0 0 30px 0;
-	position: absolute;
-	bottom: 0;
-	left: 120px;
-	font-size: 18px;
-	font-family: "La Belle Aurrore";
-}
-
 .container {
 	width: 100%;
 	will-change: contents;
@@ -40,13 +24,12 @@
 .contact-page {
 	.text-zone {
 		position: absolute;
-		left: 10%;
-		top: 50%;
-		transform: translatey(-50%);
-		width: 50%;
+		display: flex;
+		top: 13%;
+		width: 88%;
+		margin: 0 6%;
 		vertical-align: middle;
-		display: table-cell;
-		max-height: 90%;
+		flex-direction: column;
 
 		h1 {
 			font-size: 53px;
@@ -57,27 +40,6 @@
 			position: relative;
 			margin-bottom: 40px;
 			left: 10px;
-
-			&::before {
-				content: "<h1>";
-				font-family: "La Belle Aurrore", cursive;
-				font-size: 18px;
-				line-height: 18px;
-				position: absolute;
-				margin-top: -20px;
-				left: -35px;
-				opacity: 0.6;
-			}
-
-			&::after {
-				content: "</h1>";
-				font-family: "La Belle Aurrore", cursive;
-				font-size: 18px;
-				position: absolute;
-				left: -35px;
-				bottom: -30px;
-				opacity: 0.6;
-			}
 		}
 
 		p {

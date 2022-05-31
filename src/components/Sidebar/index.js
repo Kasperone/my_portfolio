@@ -2,7 +2,7 @@ import { Link, NavLink } from "react-router-dom"
 import { useEffect, useRef } from "react"
 import "./index.scss"
 import "animate.css"
-import LogoK from "../../assets/images/k-logo.png"
+import LogoK from "../../assets/images/k-logo-1.png"
 import LogoSurname from "../../assets/images/k-surname.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
@@ -22,32 +22,39 @@ console.log("Sidebar Start")
 const Sidebar = () => {
 	const menuBtnRef = useRef(null)
 	useEffect(() => {
-		const menuBtn = document.querySelector(".menu-btn")
-		const navBar = document.querySelector(".nav-bar-slide")
+		const menuBtn = document.querySelector(".nav-bar_btn_wrapper")
+		const navBar = document.querySelector(".nav-bar_slide")
+
+		console.log(navBar)
+
 		let menuOpen = false
 
 		menuBtn.addEventListener("click", () => {
 			if (!menuOpen) {
 				menuBtn.classList.add("open")
+				navBar.classList.add("nav-bar_open")
 
 				menuOpen = true
 			} else {
 				menuBtn.classList.remove("open")
+				navBar.classList.remove("nav-bar_open")
 				menuOpen = false
 			}
 		})
 	}, [])
 
 	return (
-		<div className='nav-bar'>
-			<Link className='logo' to='/'>
-				<img src={LogoK} alt='logo' />
-				<img className='logo-text' src={LogoSurname} alt='kosecki' />
-				<div className='menu-btn' ref={menuBtnRef}>
-					<div className='menu-btn_burger'></div>
+		<header className='header'>
+			<Link className='header-top' to='/'>
+				<div className='header-top_logo-wrapper'>
+					<img src={LogoK} alt='logo' />
+					{/* <img className='logo-text' src={LogoSurname} alt='kosecki' /> */}
+				</div>
+				<div className='nav-bar_btn_wrapper' ref={menuBtnRef}>
+					<div className='nav-bar_btn-burger'></div>
 				</div>
 			</Link>
-			<nav className='nav-bar-slide'>
+			<nav className='nav-bar_slide'>
 				<NavLink
 					exact='true'
 					activeclassname='active'
@@ -103,7 +110,7 @@ const Sidebar = () => {
 					</a>
 				</li>
 			</ul>
-		</div>
+		</header>
 	)
 }
 
