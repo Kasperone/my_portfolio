@@ -6,12 +6,14 @@ console.log("Layout Start")
 
 const Layout = () => {
 	return (
-		<div className='App'>
-			<div className='page'>
+		<>
+			<div className='App'>
+				<div className='page'>
+					<Outlet />
+				</div>
 				<Sidebar />
-				<Outlet />
 			</div>
-		</div>
+		</>
 	)
 }
 console.log("Layout End")

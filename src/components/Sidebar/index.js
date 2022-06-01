@@ -3,7 +3,6 @@ import { useEffect, useRef } from "react"
 import "./index.scss"
 import "animate.css"
 import LogoK from "../../assets/images/k-logo-1.png"
-import LogoSurname from "../../assets/images/k-surname.png"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import {
 	faHome,
@@ -29,7 +28,8 @@ const Sidebar = () => {
 
 		let menuOpen = false
 
-		menuBtn.addEventListener("click", () => {
+		menuBtn.addEventListener("click", e => {
+			e.preventDefault()
 			if (!menuOpen) {
 				menuBtn.classList.add("open")
 				navBar.classList.add("nav-bar_open")
@@ -48,10 +48,9 @@ const Sidebar = () => {
 			<Link className='header-top' to='/'>
 				<div className='header-top_logo-wrapper'>
 					<img src={LogoK} alt='logo' />
-					{/* <img className='logo-text' src={LogoSurname} alt='kosecki' /> */}
 				</div>
-				<div className='nav-bar_btn_wrapper' ref={menuBtnRef}>
-					<div className='nav-bar_btn-burger'></div>
+				<div className='nav-bar_btn_wrapper'>
+					<div className='nav-bar_btn-burger' ref={menuBtnRef}></div>
 				</div>
 			</Link>
 			<nav className='nav-bar_slide'>
