@@ -25,11 +25,11 @@
 	.text-zone {
 		position: absolute;
 		display: flex;
-		top: 13%;
+		flex-direction: column;
+		top: 8%;
 		width: 88%;
 		margin: 0 6%;
 		vertical-align: middle;
-		flex-direction: column;
 
 		h1 {
 			font-size: 53px;

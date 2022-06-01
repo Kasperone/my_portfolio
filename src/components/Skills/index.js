@@ -14,7 +14,7 @@ const Skills = () => {
 
 	return (
 		<>
-			<Loader type='pacman' />
+			<Loader type='ball-pulse' />
 			<div className='container skills-page'>
 				<div className='text-zone'>
 					<h1>
