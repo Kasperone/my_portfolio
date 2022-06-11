@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react"
-import Loader from "react-loaders"
 import AnimatedLetters from "../AnimatedLetters"
 import "./index.scss"
 
@@ -14,7 +13,6 @@ const Skills = () => {
 
 	return (
 		<>
-			<Loader type='ball-pulse' />
 			<div className='container skills-page'>
 				<div className='text-zone'>
 					<h1>

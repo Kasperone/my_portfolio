@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
-import { Link } from "react-router-dom"
 import Loader from "react-loaders"
+import Loader1 from "../Loader"
 import AnimatedLetters from "../AnimatedLetters"
 import SphereAnimation from "../SphereAnimation"
 import { createSphere } from "../SphereAnimation"
@@ -22,7 +22,7 @@ const Home = () => {
 
 	return (
 		<>
-			<Loader type='pacman' />
+			<Loader1 />
 			<SphereAnimation />
 			<div className='container home-page'>
 				<div className='text-zone'>
