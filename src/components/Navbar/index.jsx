@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react"
 import { Link, NavLink } from "react-router-dom"
-
 import "./index.scss"
 import "animate.css"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -10,22 +9,13 @@ import {
   faEnvelope,
   faComputer,
 } from "@fortawesome/free-solid-svg-icons"
-import {
-  faDiscord,
-  faGithub,
-  faLinkedin,
-} from "@fortawesome/free-brands-svg-icons"
 import LogoK from "../../assets/images/k-logo-1.png"
-
-console.log("Sidebar Start")
 
 const Navbar = () => {
   const menuBtnRef = useRef(null)
   useEffect(() => {
     const menuBtn = document.querySelector(".nav-bar_btn_wrapper")
     const navBar = document.querySelector(".nav-bar_slide")
-
-    console.log(navBar)
 
     let menuOpen = false
 
@@ -90,35 +80,6 @@ const Navbar = () => {
           <FontAwesomeIcon icon={faEnvelope} color="#92caff" />
         </NavLink>
       </nav>
-      <ul>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://www.linkedin.com/in/kasper-kosecki-1b128a239/"
-          >
-            <FontAwesomeIcon icon={faLinkedin} color="#4d4d4e" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Kasperone"
-          >
-            <FontAwesomeIcon icon={faGithub} color="#4d4d4e" />
-          </a>
-        </li>
-        <li>
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href="https://github.com/Kasperone"
-          >
-            <FontAwesomeIcon icon={faDiscord} color="#4d4d4e" />
-          </a>
-        </li>
-      </ul>
     </header>
   )
 }

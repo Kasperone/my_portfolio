@@ -1,11 +1,15 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react"
 import ClipLoader from "react-spinners/ClipLoader"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faDiscord,
+  faGithub,
+  faLinkedin,
+} from "@fortawesome/free-brands-svg-icons"
 import AnimatedLetters from "../AnimatedLetters"
 import SphereAnimation, { createSphere } from "../SphereAnimation"
 import "./index.scss"
-
-console.log("Home Start")
 
 const Home = () => {
   const style = {
@@ -80,10 +84,39 @@ const Home = () => {
 							</Link> */}
         </h2>
       </div>
+      <div className="social-icons_wrapper">
+        <ul>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.linkedin.com/in/kasper-kosecki-1b128a239/"
+            >
+              <FontAwesomeIcon icon={faLinkedin} />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/Kasperone"
+            >
+              <FontAwesomeIcon icon={faGithub} />
+            </a>
+          </li>
+          <li>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href="https://github.com/Kasperone"
+            >
+              <FontAwesomeIcon icon={faDiscord} />
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   )
 }
-
-console.log("Home End")
 
 export default Home
