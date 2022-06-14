@@ -1,0 +1,37 @@
+.social-icons_wrapper {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  top: 95%;
+
+  ul {
+    display: flex;
+
+    li {
+      display: flex;
+      background-color: #614cbe;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      margin: 0 6px;
+      box-shadow: 0px 1px 2px #92caff;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+
+        .fa-linkedin,
+        .fa-github,
+        .fa-discord {
+          width: 16px;
+          height: 16px;
+          color: #92caff;
+        }
+      }
+    }
+  }
+}
