@@ -1,9 +1,8 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
 import Navbar from "../Navbar"
+import SocialIcons from "../SocialIcons"
 import "./index.scss"
-
-console.log("Layout Start")
 
 const Layout = () => (
   <div className="App">
@@ -11,7 +10,8 @@ const Layout = () => (
       <Outlet />
     </div>
     <Navbar />
+    <SocialIcons />
   </div>
 )
-console.log("Layout End")
+
 export default Layout
