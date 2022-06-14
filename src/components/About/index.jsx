@@ -15,6 +15,12 @@ import "./index.scss"
 console.log("About Start")
 
 const About = () => {
+  const style = {
+    position: "fixed",
+    top: "50%",
+    left: "50%",
+    transform: "translate(-50%, -50%)",
+  }
   const [loading, setLoading] = useState(false)
   const [letterClass, setLetterClass] = useState("text-animate")
 
@@ -28,7 +34,9 @@ const About = () => {
   }, [])
 
   return loading ? (
-    <ClipLoader color="#ffffff" loading={loading} size={150} />
+    <div style={style}>
+      <ClipLoader color="#0083ff" loading={loading} size={80} />
+    </div>
   ) : (
     <div className="container about-page">
       <div className="text-zone">
