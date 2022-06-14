@@ -55,21 +55,23 @@ const Navbar = () => {
         </div>
       </Link>
       <nav className="nav-bar_slide">
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="home-link"
-          to="/"
-        >
-          <FontAwesomeIcon icon={faHome} color="#4d4d4e" />
-        </NavLink>
+        <div className="icon-wrapper">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="home-link"
+            to="/"
+          >
+            <FontAwesomeIcon icon={faHome} color="#92caff" />
+          </NavLink>
+        </div>
         <NavLink
           exact="true"
           activeclassname="active"
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faUser} color="#92caff" />
         </NavLink>
         <NavLink
           exact="true"
@@ -77,7 +79,7 @@ const Navbar = () => {
           className="skills-link"
           to="/skills"
         >
-          <FontAwesomeIcon icon={faComputer} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faComputer} color="#92caff" />
         </NavLink>
         <NavLink
           exact="true"
@@ -85,7 +87,7 @@ const Navbar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#4d4d4e" />
+          <FontAwesomeIcon icon={faEnvelope} color="#92caff" />
         </NavLink>
       </nav>
       <ul>
