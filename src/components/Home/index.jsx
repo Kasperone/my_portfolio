@@ -17,7 +17,7 @@ const Home = () => {
   const [loading, setLoading] = useState(false)
   const [letterClass, setLetterClass] = useState("text-animate")
   const nameArray = ["K", "a", "s", "p", "e", "r", " "]
-  const jobArray = ["J", "a", "v", "a", "S", "c", "r", "i", "p", "t", " "]
+  const jobArray = ["F", "r", "o", "n", "t", "-", "e", "n", "d", " "]
   const devArray = ["d", "e", "v", "e", "l", "o", "p", "e", "r", "."]
 
   useEffect(() => {
@@ -74,7 +74,7 @@ const Home = () => {
           </h1>
         </div>
         <h2>
-          Front-end / React.js / JavaScript
+          React.js JavaScript HTML5/CSS3
           {/* <Link to='/contact' className='flat-button'>
 								CONTACT ME
 							</Link> */}
