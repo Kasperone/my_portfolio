@@ -19,7 +19,7 @@ import LogoK from "../../assets/images/k-logo-1.png"
 
 console.log("Sidebar Start")
 
-const Sidebar = () => {
+const Navbar = () => {
   const menuBtnRef = useRef(null)
   useEffect(() => {
     const menuBtn = document.querySelector(".nav-bar_btn_wrapper")
@@ -123,4 +123,4 @@ const Sidebar = () => {
 
 console.log("Sidebar End")
 
-export default Sidebar
+export default Navbar
