@@ -27,11 +27,12 @@ const Contact = () => {
       .sendForm("YOUR_SERVICE", "YOUR_TAMPLATE", form.current, "YOUR_API_KEY")
       .then(
         (result) => {
-          alert(result.text)
+          console.log(result.text)
+          console.log("Message Sent")
           window.location.reload(false)
         },
         (error) => {
-          alert("error.text")
+          console.log(error.text)
         }
       )
   }

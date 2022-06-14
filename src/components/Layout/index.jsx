@@ -1,6 +1,6 @@
 import React from "react"
 import { Outlet } from "react-router-dom"
-import Sidebar from "../Sidebar"
+import Navbar from "../Navbar"
 import "./index.scss"
 
 console.log("Layout Start")
@@ -10,7 +10,7 @@ const Layout = () => (
     <div className="page">
       <Outlet />
     </div>
-    <Sidebar />
+    <Navbar />
   </div>
 )
 console.log("Layout End")
