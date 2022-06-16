@@ -1,5 +1,5 @@
 .header {
-  background: #0000001a;
+  background: #060f17;
   width: 100%;
   position: absolute;
   z-index: 3;
@@ -82,89 +82,98 @@
   }
 
   .nav-bar_slide {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     width: 100%;
+    height: 66px;
     position: fixed;
+    z-index: 999;
     left: 100%;
     opacity: 0;
     bottom: 0;
     text-align: center;
-    background: #000;
+    background: #060f17;
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     animation: fadeInRight 1s 1s;
-    display: flex;
-    justify-content: space-around;
 
     &.nav-bar_open {
       left: 0;
       opacity: 1;
     }
+    .icon-wrapper {
+      width: 48px;
+      height: 48px;
+      background-color: #1f1d6c;
+      border-radius: 12px;
 
-    a {
-      font-size: 22px;
-      display: block;
-      line-height: 51px;
-      height: 51px;
-      position: relative;
-      text-decoration: none;
-
-      i {
-        transition: all 0.3s ease-out;
-      }
-
-      &:hover {
-        color: #ffffff;
-
-        svg {
-          opacity: 0;
-        }
-
-        &::after {
-          opacity: 1;
-        }
-      }
-
-      &::after {
-        content: "";
-        font-size: 9px;
-        letter-spacing: 2px;
-        position: absolute;
-        bottom: 0;
+      a {
+        font-size: 22px;
         display: block;
-        width: 100%;
-        text-align: center;
-        opacity: 0;
-        transition: all 0.3 ease-out;
-      }
+        line-height: 51px;
+        height: 51px;
+        position: relative;
+        text-decoration: none;
 
-      &:first-child {
-        &::after {
-          content: "HOME";
+        i {
+          transition: all 0.3s ease-out;
         }
-      }
-    }
 
-    a.about-link {
-      &::after {
-        content: "ABOUT";
-      }
-    }
+        // &:hover {
+        //   color: #ffffff;
 
-    a.skills-link {
-      &::after {
-        content: "SKILLS";
-      }
-    }
+        //   svg {
+        //     opacity: 1;
+        //   }
 
-    a.contact-link {
-      &::after {
-        content: "CONTACT";
-      }
-    }
+        //   &::after {
+        //     opacity: 1;
+        //   }
+        // }
 
-    a.active {
-      svg {
-        color: #fffa5a;
+        // &::after {
+        //   content: "";
+        //   font-size: 9px;
+        //   letter-spacing: 2px;
+        //   position: absolute;
+        //   bottom: 0;
+        //   display: block;
+        //   width: 100%;
+        //   text-align: center;
+        //   opacity: 0;
+        //   transition: all 0.3 ease-out;
+        // }
+
+        // &:first-child {
+        //   &::after {
+        //     content: "HOME";
+        //   }
+        // }
+      }
+
+      // a.about-link {
+      //   &::after {
+      //     content: "ABOUT";
+      //   }
+      // }
+
+      // a.skills-link {
+      //   &::after {
+      //     content: "SKILLS";
+      //   }
+      // }
+
+      // a.contact-link {
+      //   &::after {
+      //     content: "CONTACT";
+      //   }
+      // }
+
+      a.active {
+        svg {
+          color: #fffa5a;
+        }
       }
     }
   }

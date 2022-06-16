@@ -7,7 +7,7 @@ import {
   faHome,
   faUser,
   faEnvelope,
-  faComputer,
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons"
 import LogoK from "../../assets/images/k-logo-1.png"
 
@@ -55,35 +55,39 @@ const Navbar = () => {
             <FontAwesomeIcon icon={faHome} color="#fff" />
           </NavLink>
         </div>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="about-link"
-          to="/about"
-        >
-          <FontAwesomeIcon icon={faUser} color="#fff" />
-        </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="skills-link"
-          to="/skills"
-        >
-          <FontAwesomeIcon icon={faComputer} color="#fff" />
-        </NavLink>
-        <NavLink
-          exact="true"
-          activeclassname="active"
-          className="contact-link"
-          to="/contact"
-        >
-          <FontAwesomeIcon icon={faEnvelope} color="#fff" />
-        </NavLink>
+        <div className="icon-wrapper">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="about-link"
+            to="/about"
+          >
+            <FontAwesomeIcon icon={faUser} color="#fff" />
+          </NavLink>
+        </div>
+        <div className="icon-wrapper">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="skills-link"
+            to="/skills"
+          >
+            <FontAwesomeIcon icon={faBrain} color="#fff" />
+          </NavLink>
+        </div>
+        <div className="icon-wrapper">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="contact-link"
+            to="/contact"
+          >
+            <FontAwesomeIcon icon={faEnvelope} color="#fff" />
+          </NavLink>
+        </div>
       </nav>
     </header>
   )
 }
-
-console.log("Sidebar End")
 
 export default Navbar
