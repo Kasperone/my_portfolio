@@ -1,12 +1,12 @@
 .main-wrapper {
-  height: 100vh;
+  // height: 100vh;
   display: flex;
   position: absolute;
   transform-style: preserve-3d;
   // perspective: 400px;
   // inset: 0;
   left: 52px;
-  top: 96px;
+  top: 15%;
 
   .sphere-wrapper {
     transform-style: preserve-3d;
