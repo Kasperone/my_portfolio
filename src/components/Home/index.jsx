@@ -1,6 +1,13 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react"
 import ClipLoader from "react-spinners/ClipLoader"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import {
+  faReact,
+  faJs,
+  faHtml5,
+  faCss3,
+} from "@fortawesome/free-brands-svg-icons"
 import AnimatedLetters from "../AnimatedLetters"
 import SphereAnimation, { createSphere } from "../SphereAnimation"
 import "./index.scss"
@@ -39,7 +46,7 @@ const Home = () => {
     <div className="container home-page">
       <SphereAnimation />
       <div className="text-zone">
-        <div>
+        <div className="headline">
           <h1>
             <span className={letterClass}>H</span>
             <span className={`${letterClass} _12`}>i</span>
@@ -71,12 +78,28 @@ const Home = () => {
             />
           </h1>
         </div>
-        <h2>
-          React.js JavaScript HTML5/CSS3
-          {/* <Link to='/contact' className='flat-button'>
-								CONTACT ME
-							</Link> */}
-        </h2>
+        <div className="skills-wrapper">
+          <div className="skills">
+            <div className="skills-element">
+              <FontAwesomeIcon icon={faReact} />
+              <h2>React.js</h2>
+            </div>
+            <div className="skills-element">
+              <FontAwesomeIcon icon={faJs} />
+              <h2>JavaScript</h2>
+            </div>
+          </div>
+          <div className="skills">
+            <div className="skills-element">
+              <FontAwesomeIcon icon={faHtml5} />
+              <h2>HTML5</h2>
+            </div>
+            <div className="skills-element">
+              <FontAwesomeIcon icon={faCss3} />
+              <h2>CSS3</h2>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
