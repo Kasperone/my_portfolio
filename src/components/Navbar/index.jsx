@@ -52,7 +52,7 @@ const Navbar = () => {
             className="home-link"
             to="/"
           >
-            <FontAwesomeIcon icon={faHome} color="#92caff" />
+            <FontAwesomeIcon icon={faHome} color="#fff" />
           </NavLink>
         </div>
         <NavLink
@@ -61,7 +61,7 @@ const Navbar = () => {
           className="about-link"
           to="/about"
         >
-          <FontAwesomeIcon icon={faUser} color="#92caff" />
+          <FontAwesomeIcon icon={faUser} color="#fff" />
         </NavLink>
         <NavLink
           exact="true"
@@ -69,7 +69,7 @@ const Navbar = () => {
           className="skills-link"
           to="/skills"
         >
-          <FontAwesomeIcon icon={faComputer} color="#92caff" />
+          <FontAwesomeIcon icon={faComputer} color="#fff" />
         </NavLink>
         <NavLink
           exact="true"
@@ -77,7 +77,7 @@ const Navbar = () => {
           className="contact-link"
           to="/contact"
         >
-          <FontAwesomeIcon icon={faEnvelope} color="#92caff" />
+          <FontAwesomeIcon icon={faEnvelope} color="#fff" />
         </NavLink>
       </nav>
     </header>
