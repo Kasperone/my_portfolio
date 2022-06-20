@@ -13,6 +13,7 @@ import LogoK from "../../assets/images/k-logo-1.png"
 
 const Navbar = () => {
   const menuBtnRef = useRef(null)
+
   useEffect(() => {
     const menuBtn = document.querySelector(".nav-bar_btn_wrapper")
     const navBar = document.querySelector(".nav-bar_slide")
