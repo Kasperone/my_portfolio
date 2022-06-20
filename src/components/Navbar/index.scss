@@ -2,7 +2,8 @@
   background: #060f17;
   width: 100%;
   position: absolute;
-  z-index: 3;
+  top: 0;
+  z-index: 10;
 
   .header-top {
     display: flex;
@@ -96,7 +97,7 @@
     -webkit-transition: all 0.3s ease-out;
     transition: all 0.3s ease-out;
     animation: fadeInRight 1s 1s;
-    z-index: 6;
+    // z-index: 6;
 
     &.nav-bar_open {
       left: 0;
@@ -132,7 +133,7 @@
           background: #93c9fc;
           width: 50px;
           height: 50px;
-          z-index: -10;
+          z-index: -1;
           left: 1px;
           top: 1px;
           border-radius: 12px;
