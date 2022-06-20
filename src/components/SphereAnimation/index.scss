@@ -1,18 +1,16 @@
 .main-wrapper {
-  // height: 100vh;
   display: flex;
-  position: absolute;
+  justify-content: center;
+  // position: absolute;
   transform-style: preserve-3d;
-  // perspective: 400px;
-  // inset: 0;
-  left: 52px;
-  top: 15%;
+  margin-top: 200px;
 
   .sphere-wrapper {
+    display: inline-block;
     transform-style: preserve-3d;
-    width: 300px;
-    height: 300px;
-    position: relative;
+    width: 150px;
+    height: 150px;
+    // position: relative;
     animation: rotate3d 15s linear infinite;
   }
 }
@@ -20,7 +18,7 @@
 .plane {
   position: absolute;
   transform-style: preserve-3d;
-  inset: 0;
+  // inset: 0;
 }
 
 .spoke {

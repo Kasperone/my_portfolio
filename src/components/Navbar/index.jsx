@@ -8,6 +8,7 @@ import {
   faUser,
   faEnvelope,
   faBrain,
+  faBriefcase,
 } from "@fortawesome/free-solid-svg-icons"
 import LogoK from "../../assets/images/k-logo-1.png"
 
@@ -74,6 +75,16 @@ const Navbar = () => {
             to="/skills"
           >
             <FontAwesomeIcon icon={faBrain} color="#fff" />
+          </NavLink>
+        </div>
+        <div className="icon-wrapper">
+          <NavLink
+            exact="true"
+            activeclassname="active"
+            className="skills-link"
+            to="/my-work"
+          >
+            <FontAwesomeIcon icon={faBriefcase} color="#fff" />
           </NavLink>
         </div>
         <div className="icon-wrapper">

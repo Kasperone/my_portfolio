@@ -1,18 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
 import React, { useState, useEffect } from "react"
-import {
-  faCss3,
-  faGitAlt,
-  faHtml5,
-  faJsSquare,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ClipLoader from "react-spinners/ClipLoader"
 import AnimatedLetters from "../AnimatedLetters/index"
-import "./index.scss"
+import kPhoto from "../../assets/images/kk-color.jpg"
 
-console.log("About Start")
+import "./index.scss"
 
 const About = () => {
   const style = {
@@ -40,13 +32,16 @@ const About = () => {
   ) : (
     <div className="container about-page">
       <div className="text-zone">
-        <h1>
-          <AnimatedLetters
-            letterClass={letterClass}
-            strArray={["A", "b", "o", "u", "t", " ", "m", "e"]}
-            idx={15}
-          />
-        </h1>
+        <div className="about-page_header">
+          <h1>
+            <AnimatedLetters
+              letterClass={letterClass}
+              strArray={["A", "b", "o", "u", "t", " ", "m", "e"]}
+              idx={15}
+            />
+          </h1>
+          <img className="about-photo" src={kPhoto} alt="my photography" />
+        </div>
         <p>
           I am a beginner front-end developer with knowledge of JavaScript,
           HTML/CSS3 and React.js. In 2022, I graduated from CodersLab, where I
@@ -67,7 +62,5 @@ const About = () => {
     </div>
   )
 }
-
-console.log("About End")
 
 export default About
