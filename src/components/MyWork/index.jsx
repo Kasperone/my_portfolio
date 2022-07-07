@@ -1,5 +1,10 @@
 import React from "react"
+import Slider from "./Slider"
 
-const MyWork = () => <div>My work</div>
+const MyWork = () => (
+  <div>
+    <Slider />
+  </div>
+)
 
 export default MyWork
